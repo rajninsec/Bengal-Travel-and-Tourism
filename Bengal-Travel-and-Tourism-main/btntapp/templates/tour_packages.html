@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+		<title>Tour and packages</title>
+		<link rel="icon" href="{% static 'images/icon.png' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'images/images.jfif' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="{% static 'images/w3.css' %}">
+    	<link rel="stylesheet" href="{% static 'images/css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/Tour_packages.css' %}">
+	</head>
+
+	<header>
+		<div class="w3-xlarge" style="position: static;font-variant: small-caps;display: block;">
+		<button class="w3-button w3-red w3-top" onclick="window.location.href='http://localhost:8000/homepage/';">Bengal Travel and Tourism</button>
+		</div>
+	</header><br><br><br>
+
+	<body class="w3-light-grey">
+		<center>
+			<div class="w3-content" style="max-width:1500px">
+			  <img class="mySlides" id="overwrite" src="{% static 'images/Taj_Mahal.png' %}" style="width:750px;height:500px;">
+			  <img class="mySlides" src="{% static 'images/Christ the Redeemer in Rio de Janeiro.png' %}" style="width:750px;height:500px;display:none">
+			  <img class="mySlides" src="{% static 'images/Machu Picchu in Peru.png' %}" style="width:750px;height:500px;display:none">
+			  <img class="mySlides" src="{% static 'images/Great Wall of China.png' %}" style="width:750px;height:500px;display:none">
+			  <img class="mySlides" src="{% static 'images/Chichen Itza.png' %}" style="width:750px;height:500px;display:none">
+			  <img class="mySlides" src="{% static 'images/Roman Colosseum.png' %}" style="width:750px;height:500px;display:none">
+			  <img class="mySlides" src="{% static 'images/Petra in Jordan.png' %}" style="width:750px;height:500px;display:none">
+			  <div class="w3-row-padding w3-section">
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Taj_Mahal.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(1)">
+			    </div>
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Christ the Redeemer in Rio de Janeiro.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(2)">
+			    </div>
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Machu Picchu in Peru.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(3)">
+			    </div>
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Great Wall of China.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(4)">
+			    </div>
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Chichen Itza.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(5)">
+			    </div>
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Roman Colosseum.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(6)">
+			    </div>
+			    <div class="anonymous">
+			      <img class="demo img" src="{% static 'images/Petra in Jordan.png' %}" style="width:200px;height:135px;cursor:pointer" onclick="currentDiv(7)">
+			    </div>
+			  </div>
+			</div>
+		</center>
+		<center><img src="{% static 'images/horizontal_line_1.png' %}" style="width: 500px;height: 100px;"></center>
+		<div class="clearfix">
+			<div class="column menu">
+				<caption><h3 style="font-variant: small-caps; text-align: center;">Categories</h3></caption><br>
+				<ul>
+					<li><a href="#familyvisit">Family Visit</a></li>
+					<li><a href="#couplevisit">Couple Visit</a></li>
+					<li><a href="#occasionalvisit">Occasional Visit</a></li>
+					<li><a href="#seasonalvisit">Seasonal Visit</a></li>
+					<li><a href="#grouptour">Group Tour</a></li>
+				</ul>
+			</div>
+			<div class="column content">
+				<h3 style="font-variant: small-caps;text-align: center;">Top domestic destination</h3>
+    			<div class="clearflix">
+    				<img class="img1" src="{% static 'images/Taj_Mahal.png' %}" height="170" width="170">
+    				<h4 style="text-align: center;line-height: 10%;letter-spacing: 2px;text-shadow: 2px 2px 10px red"><b>The Taj Mahal</b></h4>
+    				<p style="line-height: 10%">Package ID: <b>D0001</b></p>
+    				<p style="line-height: 25%">Single day visit</p>
+    				<p style="text-align: center;"><b>From :</b>&nbsp; Anywhere(within India) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>To :</b>&nbsp; Uttar Pradesh-Pandit Deen Dayal Upadhyay Airport</p>
+    				<p style="display: inline;line-height: 0.8">Select a date :</p><input type="date" name="date"><br>
+    				<strong style="line-height: 3.5;font-size: 12px">Note : Booked ticket cannot be cancelled / Selected date may be changed</strong>
+    				<button type="submit" style="position: relative;float: right;right: 20px;bottom: 5px;padding: 8px 15px;background-color: red;color: white;">Starting from ₹3999</button>
+    			</div>
+    			<div class="clearflix">
+    				<img class="img1" src="{% static 'images/Amber_fort.png' %}" height="170" width="170">
+    				<h4 style="text-align: center;line-height: 10%;letter-spacing: 2px;text-shadow: 2px 2px 10px red"><b>The Amber Fort</b></h4>
+    				<p style="line-height: 10%">Package ID: <b>D0002</b></p>
+    				<p style="line-height: 25%">Single day visit</p>
+    				<p style="text-align: center;"><b>From :</b>&nbsp; Anywhere(within India) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>To :</b>&nbsp; Rajasthan-Jaipur Airport</p>
+    				<p style="display: inline;line-height: 0.8">Select a date :</p><input type="date" name="date"><br>
+    				<strong style="line-height: 3.5;font-size: 12px">Note : Booked ticket cannot be cancelled / Selected date may be changed</strong>
+    				<button style="position: relative;float: right;right: 20px;bottom: 5px;padding: 8px 15px;background-color: red;color: white">Starting from ₹3999</button>
+    			</div>
+    			<div class="clearflix">
+    				<img class="img1" src="{% static 'images/Manali_Leh_road_trip.png' %}" height="170" width="170">
+    				<h4 style="text-align: center;line-height: 10%;letter-spacing: 2px;text-shadow: 2px 2px 10px red"><b>Manali-Leh Road Trip</b></h4>
+    				<p style="line-height: 10%">Package ID: <b>D0003</b></p>
+    				<p style="line-height: 25%">Two day visit</p>
+    				<p style="text-align: center;"><b>From :</b>&nbsp; Anywhere(within India) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>To :</b>&nbsp; Himachal Pradesh-Kullu Manali Airport</p>
+    				<p style="display: inline;line-height: 0.8">Select a date :</p><input type="date" name="date"><br>
+    				<strong style="line-height: 3.5;font-size: 12px">Note : Booked ticket cannot be cancelled / Selected date may be changed</strong>
+    				<button style="position: relative;float: right;right: 20px;bottom: 5px;padding: 8px 15px;background-color: red;color: white">Starting from ₹5999</button>
+    			</div>
+    			<div class="clearflix">
+    				<img class="img1" src="{% static 'images/Markha_Valley_Trek.png' %}" height="170" width="170">
+    				<h4 style="text-align: center;line-height: 10%;letter-spacing: 2px;text-shadow: 2px 2px 10px red"><b>Markha Valley Trek</b></h4>
+    				<p style="line-height: 10%">Package ID: <b>D0004</b></p>
+    				<p style="line-height: 25%">Two day visit</p>
+    				<p style="text-align: center;"><b>From :</b>&nbsp; Anywhere(within India) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>To :</b>&nbsp; Leh-Kushok Bakula Rimpochee Airport</p>
+    				<p style="display: inline;line-height: 0.8">Select a date :</p><input type="date" name="date"><br>
+    				<strong style="line-height: 3.5;font-size: 12px">Note : Booked ticket cannot be cancelled / Selected date may be changed</strong>
+    				<button style="position: relative;float: right;right: 20px;bottom: 5px;padding: 8px 15px;background-color: red;color: white">Starting from ₹5999</button>
+    			</div>
+    			<div class="clearflix">
+    				<img class="img1" src="{% static 'images/Darjeeling.png' %}" height="170" width="170">
+    				<h4 style="text-align: center;line-height: 10%;letter-spacing: 2px;text-shadow: 2px 2px 10px red"><b>Darjeeling Trip</b></h4>
+    				<p style="line-height: 10%">Package ID: <b>D0005</b></p>
+    				<p style="line-height: 25%">Two day visit</p>
+    				<p style="text-align: center;"><b>From :</b>&nbsp; Anywhere(within India) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>To :</b>&nbsp; West Bengal-Silliguri-Bagdogra Airport</p>
+    				<p style="display: inline;line-height: 0.8">Select a date :</p><input type="date" name="date"><br>
+    				<strong style="line-height: 3.5;font-size: 12px">Note : Booked ticket cannot be cancelled / Selected date may be changed</strong>
+    				<button style="position: relative;float: right;right: 20px;bottom: 5px;padding: 8px 15px;background-color: red;color: white">Starting from ₹5999</button>
+    			</div>
+    			<div class="clearflix">
+    				<img class="img1" src="{% static 'images/Mumbai.png' %}" height="170" width="170">
+    				<h4 style="text-align: center;line-height: 10%;letter-spacing: 2px;text-shadow: 2px 2px 10px red"><b>Mumbai Trip</b></h4>
+    				<p style="line-height: 10%">Package ID: <b>D0006</b></p>
+    				<p style="line-height: 25%">Three day visit</p>
+    				<p style="text-align: center;"><b>From :</b>&nbsp; Anywhere(within India) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <b>To :</b>&nbsp;Mumbai-Chhatrapati Shivaji International Airport</p>
+    				<p style="display: inline;line-height: 0.8">Select a date :</p><input type="date" name="date"><br>
+    				<strong style="line-height: 3.5;font-size: 12px">Note : Booked ticket cannot be cancelled / Selected date may be changed</strong>
+    				<button style="position: relative;float: right;right: 20px;bottom: 5px;padding: 8px 15px;background-color: red;color: white">Starting from ₹7999</button>
+    			</div>
+			</div>
+			<div class="column menu">
+				<h3 style="font-variant: small-caps;text-align: center;">Advertisement</h3>
+				<p>The space here is to ads content</p>
+			</div>
+		</div>
+	</body>
+
+	<footer>
+		
+	</footer>
+
+	<script>
+		function currentDiv(n) {
+		  showDivs(slideIndex = n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+		  }
+		  x[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " w3-opacity-off";
+		}
+	</script>
+</html>	

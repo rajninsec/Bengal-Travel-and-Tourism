@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+		<title>: : : : : : : : : : : : Login : : : : : : : : : : : :</title>
+		<link rel="icon" href="{% static 'images/icon.png' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'images/images.jfif' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="{% static 'images/w3.css' %}">
+    	<link rel="stylesheet" href="{% static 'images/css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+      		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}.myLink {display: none}
+    	</style>
+	</head>
+
+	<header>
+		<div class="w3-bar w3-white w3-xlarge" style="position: static;font-variant: small-caps;">
+		<button class="w3-button w3-red w3-top" onclick="window.location.href='http://localhost:8000/homepage/';">Bengal Travel and Tourism</button>
+		</div>
+	</header>
+
+	<body class="w3-light-grey">
+		<div class="w3-display-middle" style="width:750px; height: 500px">
+			<form method="POST" action="/check/">
+				{% csrf_token %}
+				<fieldset>
+					<legend>:::::: Login with your credentials ::::::</legend>
+					<center>
+						{{ form.as_p }}
+						<input type="checkbox" required> I accept the <u>Terms and Conditions</u></button><br><br>
+						<button type="submit">Sign In</button>&nbsp;&nbsp;
+						<button type="reset">Reset</button>
+						<br><br>
+						<a href="/forgot_pass/">Forgot  your username / password</a><br><br>
+					</center>	
+					<marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();"><a href="/customreg/"><span class="w3-tag w3-yellow">New User registration ? Click here to Sign Up</span></a></marquee>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

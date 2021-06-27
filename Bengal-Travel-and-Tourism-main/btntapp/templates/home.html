@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bengal Travel and Tourism</title>
+    <link rel="icon" href="{% static 'images/icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'images/images.jfif' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'images/w3.css' %}">
+    <link rel="stylesheet" href="{% static 'images/css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+      .myLink {display: none}
+    </style>
+  </head>
+
+<header>
+  <div class="w3-bar w3-white w3-xlarge" style="position: static;font-variant: small-caps;">
+  <button class="w3-button w3-red w3-top" onclick="window.location.href='http://localhost:8000/homepage/';">Bengal Travel and Tourism</button>
+  </div>
+</header>
+
+<body class="w3-light-grey">
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+  <img class="w3-image" src="{% static 'images/london2.jpg' %}" alt="London" width="1500" height="700">
+  <div class="w3-display-middle" style="width:60%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink w3-red" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Flight</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotel');"><i class="fa fa-bed w3-margin-right"></i>Hotel</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Rental');"><i class="fa fa-taxi w3-margin-right"></i>Rental</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'FAQs');"><i class="fa fa-question-circle w3-margin-right"></i>FAQs</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'About us');"><i class="fa fa-group w3-margin-right"></i>About us</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Feedback');"><i class="fa fa-envelope w3-margin-right"></i>Feedback</button>
+      <button class="w3-bar-item w3-button tablink" onclick="window.location.href='http://localhost:8000/login/';"><i class="fa fa-user w3-margin-right"></i>{{first_name}}</button>
+      <button class="w3-bar-item w3-button tablink" onclick="window.location.href='http://localhost:8000/logoutview/';"><i class="fa fa-power-off w3-margin-right"></i>Logout</button>
+    </div>
+
+    <!-- Tabs -->
+    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Travel the world with us</h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+          <label>From</label>
+          <input class="w3-input w3-border" list="country_from" id="from" placeholder="Departing from">
+        </div>
+        <datalist id="country_from">
+          <option value="">------------Select State------------</option>
+          <option value="India">India</option>
+          <option value="Afganistan">Afganistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+          <option value="American Samoa">American Samoa</option>
+          <option value="Andorra">Andorra</option>
+          <option value="Angola">Angola</option>
+          <option value="Anguilla">Anguilla</option>
+          <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Armenia">Armenia</option>
+          <option value="Aruba">Aruba</option>
+          <option value="Australia">Australia</option>
+          <option value="Austria">Austria</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Bahamas">Bahamas</option>
+          <option value="Bahrain">Bahrain</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Barbados">Barbados</option>
+          <option value="Belarus">Belarus</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Belize">Belize</option>
+          <option value="Benin">Benin</option>
+          <option value="Bermuda">Bermuda</option>
+          <option value="Bhutan">Bhutan</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Bonaire">Bonaire</option>
+          <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+          <option value="Botswana">Botswana</option>
+          <option value="Brazil">Brazil</option>
+          <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+          <option value="Brunei">Brunei</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="Burkina Faso">Burkina Faso</option>
+          <option value="Burundi">Burundi</option>
+          <option value="Cambodia">Cambodia</option>
+          <option value="Cameroon">Cameroon</option>
+          <option value="Canada">Canada</option>
+          <option value="Canary Islands">Canary Islands</option>
+          <option value="Cape Verde">Cape Verde</option>
+          <option value="Cayman Islands">Cayman Islands</option>
+          <option value="Central African Republic">Central African Republic</option>
+          <option value="Chad">Chad</option>
+          <option value="Channel Islands">Channel Islands</option>
+          <option value="Chile">Chile</option>
+          <option value="China">China</option>
+          <option value="Christmas Island">Christmas Island</option>
+          <option value="Cocos Island">Cocos Island</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Comoros">Comoros</option>
+          <option value="Congo">Congo</option>
+          <option value="Cook Islands">Cook Islands</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Cote DIvoire">Cote DIvoire</option>
+          <option value="Croatia">Croatia</option>
+          <option value="Cuba">Cuba</option>
+          <option value="Curacao">Curacao</option>
+          <option value="Cyprus">Cyprus</option>
+          <option value="Czech Republic">Czech Republic</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Djibouti">Djibouti</option>
+          <option value="Dominica">Dominica</option>
+          <option value="Dominican Republic">Dominican Republic</option>
+          <option value="East Timor">East Timor</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="Egypt">Egypt</option>
+          <option value="El Salvador">El Salvador</option>
+          <option value="Equatorial Guinea">Equatorial Guinea</option>
+          <option value="Eritrea">Eritrea</option>
+          <option value="Estonia">Estonia</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Falkland Islands">Falkland Islands</option>
+          <option value="Faroe Islands">Faroe Islands</option>
+          <option value="Fiji">Fiji</option>
+          <option value="Finland">Finland</option>
+          <option value="France">France</option>
+          <option value="French Guiana">French Guiana</option>
+          <option value="French Polynesia">French Polynesia</option>
+          <option value="French Southern Ter">French Southern Ter</option>
+          <option value="Gabon">Gabon</option>
+          <option value="Gambia">Gambia</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Germany">Germany</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Gibraltar">Gibraltar</option>
+          <option value="Great Britain">Great Britain</option>
+          <option value="Greece">Greece</option>
+          <option value="Greenland">Greenland</option>
+          <option value="Grenada">Grenada</option>
+          <option value="Guadeloupe">Guadeloupe</option>
+          <option value="Guam">Guam</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Guinea">Guinea</option>
+          <option value="Guyana">Guyana</option>
+          <option value="Haiti">Haiti</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Honduras">Honduras</option>
+          <option value="Hong Kong">Hong Kong</option>
+          <option value="Hungary">Hungary</option>
+          <option value="Iceland">Iceland</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Iran">Iran</option>
+          <option value="Iraq">Iraq</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Isle of Man">Isle of Man</option>
+          <option value="Israel">Israel</option>
+          <option value="Italy">Italy</option>
+          <option value="Jamaica">Jamaica</option>
+          <option value="Japan">Japan</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Kazakhstan">Kazakhstan</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Kiribati">Kiribati</option>
+          <option value="Korea North">Korea North</option>
+          <option value="Korea South">Korea South</option>
+          <option value="Kuwait">Kuwait</option>
+          <option value="Kyrgyzstan">Kyrgyzstan</option>
+          <option value="Laos">Laos</option>
+          <option value="Latvia">Latvia</option>
+          <option value="Lebanon">Lebanon</option>
+          <option value="Lesotho">Lesotho</option>
+          <option value="Liberia">Liberia</option>
+          <option value="Libya">Libya</option>
+          <option value="Liechtenstein">Liechtenstein</option>
+          <option value="Lithuania">Lithuania</option>
+          <option value="Luxembourg">Luxembourg</option>
+          <option value="Macau">Macau</option>
+          <option value="Macedonia">Macedonia</option>
+          <option value="Madagascar">Madagascar</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Malawi">Malawi</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Mali">Mali</option>
+          <option value="Malta">Malta</option>
+          <option value="Marshall Islands">Marshall Islands</option>
+          <option value="Martinique">Martinique</option>
+          <option value="Mauritania">Mauritania</option>
+          <option value="Mauritius">Mauritius</option>
+          <option value="Mayotte">Mayotte</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Midway Islands">Midway Islands</option>
+          <option value="Moldova">Moldova</option>
+          <option value="Monaco">Monaco</option>
+          <option value="Mongolia">Mongolia</option>
+          <option value="Montserrat">Montserrat</option>
+          <option value="Morocco">Morocco</option>
+          <option value="Mozambique">Mozambique</option>
+          <option value="Myanmar">Myanmar</option>
+          <option value="Nambia">Nambia</option>
+          <option value="Nauru">Nauru</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Netherland Antilles">Netherland Antilles</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Nevis">Nevis</option>
+          <option value="New Caledonia">New Caledonia</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Nicaragua">Nicaragua</option>
+          <option value="Niger">Niger</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Niue">Niue</option>
+          <option value="Norfolk Island">Norfolk Island</option>
+          <option value="Norway">Norway</option>
+          <option value="Oman">Oman</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Palau Island">Palau Island</option>
+          <option value="Palestine">Palestine</option>
+          <option value="Panama">Panama</option>
+          <option value="Papua New Guinea">Papua New Guinea</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Peru">Peru</option>
+          <option value="Phillipines">Phillipines</option>
+          <option value="Pitcairn Island">Pitcairn Island</option>
+          <option value="Poland">Poland</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Puerto Rico">Puerto Rico</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Republic of Montenegro">Republic of Montenegro</option>
+          <option value="Republic of Serbia">Republic of Serbia</option>
+          <option value="Reunion">Reunion</option>
+          <option value="Romania">Romania</option>
+          <option value="Russia">Russia</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="St Barthelemy">St Barthelemy</option>
+          <option value="St Eustatius">St Eustatius</option>
+          <option value="St Helena">St Helena</option>
+          <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+          <option value="St Lucia">St Lucia</option>
+          <option value="St Maarten">St Maarten</option>
+          <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+          <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+          <option value="Saipan">Saipan</option>
+          <option value="Samoa">Samoa</option>
+          <option value="Samoa American">Samoa American</option>
+          <option value="San Marino">San Marino</option>
+          <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Senegal">Senegal</option>
+          <option value="Seychelles">Seychelles</option>
+          <option value="Sierra Leone">Sierra Leone</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Slovakia">Slovakia</option>
+          <option value="Slovenia">Slovenia</option>
+          <option value="Solomon Islands">Solomon Islands</option>
+          <option value="Somalia">Somalia</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Spain">Spain</option>
+          <option value="Sri Lanka">Sri Lanka</option>
+          <option value="Sudan">Sudan</option>
+          <option value="Suriname">Suriname</option>
+          <option value="Swaziland">Swaziland</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Syria">Syria</option>
+          <option value="Tahiti">Tahiti</option>
+          <option value="Taiwan">Taiwan</option>
+          <option value="Tajikistan">Tajikistan</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Togo">Togo</option>
+          <option value="Tokelau">Tokelau</option>
+          <option value="Tonga">Tonga</option>
+          <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+          <option value="Tunisia">Tunisia</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Turkmenistan">Turkmenistan</option>
+          <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+          <option value="Tuvalu">Tuvalu</option>
+          <option value="Uganda">Uganda</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Ukraine">Ukraine</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="United States of America">United States of America</option>
+          <option value="Uraguay">Uraguay</option>
+          <option value="Uzbekistan">Uzbekistan</option>
+          <option value="Vanuatu">Vanuatu</option>
+          <option value="Vatican City State">Vatican City State</option>
+          <option value="Venezuela">Venezuela</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+          <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+          <option value="Wake Island">Wake Island</option>
+          <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+          <option value="Yemen">Yemen</option>
+          <option value="Zaire">Zaire</option>
+          <option value="Zambia">Zambia</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+        </datalist>
+        <div class="w3-half">
+          <label>To</label>
+          <input class="w3-input w3-border" type="text" placeholder="Arriving at" id="to" list="country_to">
+        </div>
+        <datalist id="country_to">
+          <option value="">------------Select State------------</option>
+          <option value="India">India</option>
+          <option value="Afganistan">Afganistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+          <option value="American Samoa">American Samoa</option>
+          <option value="Andorra">Andorra</option>
+          <option value="Angola">Angola</option>
+          <option value="Anguilla">Anguilla</option>
+          <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Armenia">Armenia</option>
+          <option value="Aruba">Aruba</option>
+          <option value="Australia">Australia</option>
+          <option value="Austria">Austria</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Bahamas">Bahamas</option>
+          <option value="Bahrain">Bahrain</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Barbados">Barbados</option>
+          <option value="Belarus">Belarus</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Belize">Belize</option>
+          <option value="Benin">Benin</option>
+          <option value="Bermuda">Bermuda</option>
+          <option value="Bhutan">Bhutan</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Bonaire">Bonaire</option>
+          <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+          <option value="Botswana">Botswana</option>
+          <option value="Brazil">Brazil</option>
+          <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+          <option value="Brunei">Brunei</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="Burkina Faso">Burkina Faso</option>
+          <option value="Burundi">Burundi</option>
+          <option value="Cambodia">Cambodia</option>
+          <option value="Cameroon">Cameroon</option>
+          <option value="Canada">Canada</option>
+          <option value="Canary Islands">Canary Islands</option>
+          <option value="Cape Verde">Cape Verde</option>
+          <option value="Cayman Islands">Cayman Islands</option>
+          <option value="Central African Republic">Central African Republic</option>
+          <option value="Chad">Chad</option>
+          <option value="Channel Islands">Channel Islands</option>
+          <option value="Chile">Chile</option>
+          <option value="China">China</option>
+          <option value="Christmas Island">Christmas Island</option>
+          <option value="Cocos Island">Cocos Island</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Comoros">Comoros</option>
+          <option value="Congo">Congo</option>
+          <option value="Cook Islands">Cook Islands</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Cote DIvoire">Cote DIvoire</option>
+          <option value="Croatia">Croatia</option>
+          <option value="Cuba">Cuba</option>
+          <option value="Curacao">Curacao</option>
+          <option value="Cyprus">Cyprus</option>
+          <option value="Czech Republic">Czech Republic</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Djibouti">Djibouti</option>
+          <option value="Dominica">Dominica</option>
+          <option value="Dominican Republic">Dominican Republic</option>
+          <option value="East Timor">East Timor</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="Egypt">Egypt</option>
+          <option value="El Salvador">El Salvador</option>
+          <option value="Equatorial Guinea">Equatorial Guinea</option>
+          <option value="Eritrea">Eritrea</option>
+          <option value="Estonia">Estonia</option>
+          <option value="Ethiopia">Ethiopia</option>
+          <option value="Falkland Islands">Falkland Islands</option>
+          <option value="Faroe Islands">Faroe Islands</option>
+          <option value="Fiji">Fiji</option>
+          <option value="Finland">Finland</option>
+          <option value="France">France</option>
+          <option value="French Guiana">French Guiana</option>
+          <option value="French Polynesia">French Polynesia</option>
+          <option value="French Southern Ter">French Southern Ter</option>
+          <option value="Gabon">Gabon</option>
+          <option value="Gambia">Gambia</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Germany">Germany</option>
+          <option value="Ghana">Ghana</option>
+          <option value="Gibraltar">Gibraltar</option>
+          <option value="Great Britain">Great Britain</option>
+          <option value="Greece">Greece</option>
+          <option value="Greenland">Greenland</option>
+          <option value="Grenada">Grenada</option>
+          <option value="Guadeloupe">Guadeloupe</option>
+          <option value="Guam">Guam</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Guinea">Guinea</option>
+          <option value="Guyana">Guyana</option>
+          <option value="Haiti">Haiti</option>
+          <option value="Hawaii">Hawaii</option>
+          <option value="Honduras">Honduras</option>
+          <option value="Hong Kong">Hong Kong</option>
+          <option value="Hungary">Hungary</option>
+          <option value="Iceland">Iceland</option>
+          <option value="Indonesia">Indonesia</option>
+          <option value="Iran">Iran</option>
+          <option value="Iraq">Iraq</option>
+          <option value="Ireland">Ireland</option>
+          <option value="Isle of Man">Isle of Man</option>
+          <option value="Israel">Israel</option>
+          <option value="Italy">Italy</option>
+          <option value="Jamaica">Jamaica</option>
+          <option value="Japan">Japan</option>
+          <option value="Jordan">Jordan</option>
+          <option value="Kazakhstan">Kazakhstan</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Kiribati">Kiribati</option>
+          <option value="Korea North">Korea North</option>
+          <option value="Korea South">Korea South</option>
+          <option value="Kuwait">Kuwait</option>
+          <option value="Kyrgyzstan">Kyrgyzstan</option>
+          <option value="Laos">Laos</option>
+          <option value="Latvia">Latvia</option>
+          <option value="Lebanon">Lebanon</option>
+          <option value="Lesotho">Lesotho</option>
+          <option value="Liberia">Liberia</option>
+          <option value="Libya">Libya</option>
+          <option value="Liechtenstein">Liechtenstein</option>
+          <option value="Lithuania">Lithuania</option>
+          <option value="Luxembourg">Luxembourg</option>
+          <option value="Macau">Macau</option>
+          <option value="Macedonia">Macedonia</option>
+          <option value="Madagascar">Madagascar</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Malawi">Malawi</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Mali">Mali</option>
+          <option value="Malta">Malta</option>
+          <option value="Marshall Islands">Marshall Islands</option>
+          <option value="Martinique">Martinique</option>
+          <option value="Mauritania">Mauritania</option>
+          <option value="Mauritius">Mauritius</option>
+          <option value="Mayotte">Mayotte</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Midway Islands">Midway Islands</option>
+          <option value="Moldova">Moldova</option>
+          <option value="Monaco">Monaco</option>
+          <option value="Mongolia">Mongolia</option>
+          <option value="Montserrat">Montserrat</option>
+          <option value="Morocco">Morocco</option>
+          <option value="Mozambique">Mozambique</option>
+          <option value="Myanmar">Myanmar</option>
+          <option value="Nambia">Nambia</option>
+          <option value="Nauru">Nauru</option>
+          <option value="Nepal">Nepal</option>
+          <option value="Netherland Antilles">Netherland Antilles</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Nevis">Nevis</option>
+          <option value="New Caledonia">New Caledonia</option>
+          <option value="New Zealand">New Zealand</option>
+          <option value="Nicaragua">Nicaragua</option>
+          <option value="Niger">Niger</option>
+          <option value="Nigeria">Nigeria</option>
+          <option value="Niue">Niue</option>
+          <option value="Norfolk Island">Norfolk Island</option>
+          <option value="Norway">Norway</option>
+          <option value="Oman">Oman</option>
+          <option value="Pakistan">Pakistan</option>
+          <option value="Palau Island">Palau Island</option>
+          <option value="Palestine">Palestine</option>
+          <option value="Panama">Panama</option>
+          <option value="Papua New Guinea">Papua New Guinea</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Peru">Peru</option>
+          <option value="Phillipines">Phillipines</option>
+          <option value="Pitcairn Island">Pitcairn Island</option>
+          <option value="Poland">Poland</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Puerto Rico">Puerto Rico</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Republic of Montenegro">Republic of Montenegro</option>
+          <option value="Republic of Serbia">Republic of Serbia</option>
+          <option value="Reunion">Reunion</option>
+          <option value="Romania">Romania</option>
+          <option value="Russia">Russia</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="St Barthelemy">St Barthelemy</option>
+          <option value="St Eustatius">St Eustatius</option>
+          <option value="St Helena">St Helena</option>
+          <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+          <option value="St Lucia">St Lucia</option>
+          <option value="St Maarten">St Maarten</option>
+          <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+          <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+          <option value="Saipan">Saipan</option>
+          <option value="Samoa">Samoa</option>
+          <option value="Samoa American">Samoa American</option>
+          <option value="San Marino">San Marino</option>
+          <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="Senegal">Senegal</option>
+          <option value="Seychelles">Seychelles</option>
+          <option value="Sierra Leone">Sierra Leone</option>
+          <option value="Singapore">Singapore</option>
+          <option value="Slovakia">Slovakia</option>
+          <option value="Slovenia">Slovenia</option>
+          <option value="Solomon Islands">Solomon Islands</option>
+          <option value="Somalia">Somalia</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Spain">Spain</option>
+          <option value="Sri Lanka">Sri Lanka</option>
+          <option value="Sudan">Sudan</option>
+          <option value="Suriname">Suriname</option>
+          <option value="Swaziland">Swaziland</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="Syria">Syria</option>
+          <option value="Tahiti">Tahiti</option>
+          <option value="Taiwan">Taiwan</option>
+          <option value="Tajikistan">Tajikistan</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Togo">Togo</option>
+          <option value="Tokelau">Tokelau</option>
+          <option value="Tonga">Tonga</option>
+          <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+          <option value="Tunisia">Tunisia</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Turkmenistan">Turkmenistan</option>
+          <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+          <option value="Tuvalu">Tuvalu</option>
+          <option value="Uganda">Uganda</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Ukraine">Ukraine</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="United States of America">United States of America</option>
+          <option value="Uraguay">Uraguay</option>
+          <option value="Uzbekistan">Uzbekistan</option>
+          <option value="Vanuatu">Vanuatu</option>
+          <option value="Vatican City State">Vatican City State</option>
+          <option value="Venezuela">Venezuela</option>
+          <option value="Vietnam">Vietnam</option>
+          <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+          <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+          <option value="Wake Island">Wake Island</option>
+          <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+          <option value="Yemen">Yemen</option>
+          <option value="Zaire">Zaire</option>
+          <option value="Zambia">Zambia</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+        </datalist>
+      </div>
+      <p><button class="w3-button w3-dark-grey" onclick="return check()">Search and find dates</button></p>
+    </div>
+
+    <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Find the best hotels</h3>
+      <p>Book a hotel with us and get the best fares and promotions.</p>
+      <p>We know hotels - we know comfort.</p>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+          <label>Location :</label><br><br>
+          <input class="w3-input" type="text" placeholder="Enter the city">
+          <p><button class="w3-button w3-dark-grey">Search Hotels</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Rental" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Best car rental in the world!</h3>
+      <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs</p>
+      <input class="w3-input w3-border" type="text" placeholder="Enter Pick-up point manually or">
+      <p id="demo"><button class="w3-button w3-dark-grey" onclick="getLocation()">Fetch current location</button></p>
+    </div>
+  
+    <div id="FAQs" class="w3-container w3-white w3-padding-16 myLink">
+      <span class="w3-tag w3-deep-orange">You ask - We answer</span>
+      <details>
+        <summary>Q. Once I’ve begun my trip, who should I contact for help?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Once your journey has commenced, it is advisable to get in touch with the Airline or service provider in the city/country where you are situated.</p>
+          <p>For your convenience we have provided a link for the toll-free number of all airlines, click here.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. What is an "E" ticket?</summary>
+        <blockquote class="w3-light-grey">
+          <p>E-tickets, are offered by many major airlines, and allow you to travel without a paper ticket, eliminating the worry of leaving your tickets behind. OneTravel.com offers e-tickets when they are available.</p>
+          <p>Bring government issued photo identification (such as a driver’s license or passport) to the airport. E-ticketed passengers must have a printed boarding pass in order to proceed directly through security for check in at the gate. Customers with check-in baggage or E-tickets who do not have printed boarding passes must go to the ticket counter prior to going through security checkpoints.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. Why are the fares different from other sites?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Airlines practice the marketing concept known as "yield management,"where they sell as many seats as they can at the highest price they can get. It is impossible to pinpoint the cost of any single seat on any given flight. For example, some seats will be assigned special fares for corporate clients, while other seats will have been sold through a consolidator at a discount. Similarly, some fares may have been bought at a discount with frequent-flier award points or from a last minute Web special. At our site, you will always be quoted the lowest fare available to us at that time.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. How do I know if I need a Passport and/or Visa for my travel? What are the required documents and forms?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Passport and Visa requirements can be determined any time of the day by clicking here. If the web resources do not answer your questions, please call us at 1-866-592-9685 to speak to a live customer service specialist.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. Can I add additional people to an existing hotel booking?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Yes. You can add a guest to the same hotel room by calling our customer service desk at (866) 883-0908. Please note there may be a charge for additional guests.</p>
+          <p>If you need to book an additional room for the guest you may do so online as a new reservation.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. Can I cancel or make changes to my hotel booking?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Many pre-paid hotels are non refundable and cannot be cancelled or changed. There is a cancellation fee of $35 USD charged by OneTravel com. You may also be subject to penalties and fees from the hotel. OneTravel.com advises you to verify all hotel rules on your pre-paid reservation.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. When can I expect my refund?</summary>
+        <blockquote class="w3-light-grey">
+          <p>When a reservation is cancelled the same day it was booked, funds for the Airline portion are not collected. Any pending charges you may have seen would have been a "pending hold" for verification. These funds will return to your available credit and will not reflect as a refund. This process normally takes from 3 - 7 business days, depending on your banking institutions procedures.</p>
+          <p>Please note: Some Prepaid credit card companies will hold pending authorizations for up to 30 days.</p>
+          <p>If the airline rules allow for cancellation the day after booking, funds for the Airline portion will be refunded within 7 - 14 business days. It will depend upon the Airline(s) and your banking institutions policies. At times the refund will post before the charge is processed or may not appear on your current statement. Please contact your bank to verify the refund was received.</p>
+          <p>Any refunds requested after 48-hours of purchase are based solely upon the Airline(s) rules. If approved, the refund will generally take 1-2 billing statement cycles. In some exceptional cases refunds may take longer than originally anticipated. An email update will be sent to you advising of any delay.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. I received an email advising of a refund I did not request.</summary>
+        <blockquote class="w3-light-grey">
+          <p>These refunds are typically for seat assignment requests that could not be fulfilled by the Airline or during a quality check if we detected an overcharge. This refund does not affect your airline ticket purchase.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. I have multiple charges on my account.</summary>
+        <blockquote class="w3-light-grey">
+          <p>This occurs when multiple Airlines or passengers are booked in a reservation. You will see a charge for each ticket processed separately. Any service fees, taxes or additional services may also show as separate charges with the description of Airline/Taxes and Fees. When added together these amounts should total the amount you were quoted.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. I made a car reservation on-line, do I get a confirmation voucher?</summary>
+        <blockquote class="w3-light-grey">
+          <p>All on-line bookings of car rental services will generate a confirmation number assigned by the car rental firm. Please take a copy of your booking confirmation email with you for check in. OneTravel.com does not issue any vouchers to confirm car rental reservations.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. What do I need in order to pick up a car?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Print or email the online confirmation from OneTravel.com. This confirmation number from the car rental company is all that is needed, other than a valid driver's license and a major credit card. We do not recommend using debit-cards to pay for car rentals. Some car rental companies may also require a good driving record as a pre-requisite to rent a car and proof of insurance. They may check this at the time of rental, when the actual rental agreement is completed.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. What are the age requirements to rent a car?</summary>
+        <blockquote class="w3-light-grey">
+          <p>In the United States, most car rental companies have a minimum age of 25 or above. There are exceptions, but the renter must pay a surcharge. In Europe, foreign driver restrictions vary from country to country. Drivers need to be a minimum of 18 in most countries and have a valid US drivers license. Please check the official website of the rental company. These sites generally have age restrictions posted there, as well as information regarding seat belt laws, child seat requirements, and speed limits.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. I have an urgent need for a Passport, what can I do?</summary>
+        <blockquote class="w3-light-grey">
+          <p>Passport processing can be expedited based on the requirements. Once all documents are received, “Rush” services apply when 3 - 10 business days are available for the processing, whereas “Emergency” services apply when 1-2 business days, or less, are available. Click here to start processing your passport.</p>
+        </blockquote>
+      </details>
+      <details>
+        <summary>Q. If the name printed on my boarding pass is different than what appears on my government ID, will I still be able to fly?</summary>
+        <blockquote class="w3-light-grey">
+          <p>The name you provide when booking your travel is used to perform the watch list matching before a boarding pass is ever issued. You should ensure that the name provided when booking your travel matches the government ID that you will use when traveling.</p>
+          <p>Due to difference in boarding pass systems, boarding passes may not always display the exact name you provided when booking your travel. Differences such as the use of a middle initial instead of a full middle name or no middle name/initial at all, hyphens or apostrophes) should not cause a problem for the passenger.</p>
+        </blockquote>
+      </details>
+    </div>
+
+    <div id="About us" class="w3-container w3-white w3-padding-16 myLink">
+      <center><span class="w3-tag w3-deep-orange">OUR CREW-MEMBERS</span></center>
+      <p>1. Kundan Kumar   <span class="w3-tag w3-dark-grey">~CEO of Bengal Travel and Tourism</span></p>
+      <p>2. Rahul Kumar</p>
+      <p>3. Anuj Kumar Singh</p>
+      <p>4. Rajni Kumari</p>
+      <p>5. Ajit Kumar</p>
+      <p>6. Kishan Kanhaiya</p>
+    </div>
+
+    <div id="Feedback" class="w3-container w3-white w3-padding-16 myLink">
+      <center><span class="w3-tag w3-deep-orange">Thanks for your cooperation</span></center>
+      <!-- ><h4 style="color: red; text-align: center;"><b>.....Coming Soon.....</b></h4><!-->
+      <form method="POST" action="/feedback/">
+        {% csrf_token  %}
+        <fieldset>
+          <legend>Compliments:</legend>
+          <center>
+            <label for="name">Name:&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="id_opus" name="opus"><br><br>
+            <label for="email">E-mail:&nbsp;&nbsp;</label>
+            <input type="email" id="id_email" name="email"><br><br>
+            <label for="subject">Subject:</label>
+            <input type="text" id="id_opu" name="opu"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea name="op" rows="3" cols="60" placeholder="Write your text here..."></textarea><br>
+            <button type="submit" class="w3-button w3-red w3-margin-top">Submit</button>
+          </center>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px;">
+
+  <!-- Good offers -->
+  <div class="w3-container w3-margin-top">
+    <h3>Good Offers Right Now</h3>
+    <h6>Up to <strong>50%</strong> discount.</h6>
+  </div>
+  <div class="w3-row-padding w3-text-white w3-large">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="{% static 'images/cinqueterre.jpg' %}" alt="Cinque Terre" style="width:100%">
+        <span class="w3-display-bottomleft w3-padding">Cinque Terre</span>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="{% static 'images/newyork2.jpg' %}" alt="New York" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">New York</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="{% static 'images/sanfran.jpg' %}" alt="San Francisco" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">San Francisco</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="{% static 'images/pisa.jpg' %}" alt="Pisa" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Pisa</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="{% static 'images/paris.jpg' %}" alt="Paris" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Paris</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explore Nature -->
+  <div class="w3-container">
+    <h3>Explore Nature</h3>
+    <p>Travel with us and see nature at its finest.</p>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <img src="{% static 'images/ocean2.jpg' %}" alt="Norway" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>West Coast, Norway</h3>
+        <p class="w3-opacity">Roundtrip from Rs 2,00,000</p>
+        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+        <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+      </div>
+    </div>
+    <div class="w3-half w3-margin-bottom">
+      <img src="{% static 'images/mountains2.jpg' %}" alt="Austria" style="width:100%">
+      <div class="w3-container w3-white">
+        <h3>Mountains, Austria</h3>
+        <p class="w3-opacity">One-way from Rs 1,50,000</p>
+        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+        <button class="w3-button w3-margin-bottom">Buy Tickets</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="w3-container">
+    <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
+      <h2>Get the best offers first!</h2>
+      <form method="POST" action="/sendmail/">
+        {% csrf_token  %}
+        <p>Join our newsletter.</p>
+        <label>E-mail</label>
+        <input class="w3-input w3-border" type="email" name="E-mail" id="id_E-mail" placeholder="Your Email address">
+        <button type="submit" class="w3-button w3-red w3-margin-top">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+<!-- The Team -->
+
+<div class="w3-container" style="padding:25px 5px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">The ones who runs this company</p>
+  <div class="w3-row-padding" style="margin-top:25px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{% static '/images/kundan.jpg' %}" style="width:100%">
+        <div class="w3-container" align="center">
+          <h3>Kundan Kumar</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Netaji Subhash Engineering College</p>
+          <div style="margin: 24px 0;" align="center">
+            <a href="https://www.facebook.com/kundankumardec16"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/kundankumar_dec16/"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/KundanK50537908"><i class="fa fa-twitter"></i></a>  
+            <a href="https://www.linkedin.com/in/kundan-kumar-934721175"><i class="fa fa-linkedin"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{% static '/images/rahul.jfif' %}" style="width:100%">
+        <div class="w3-container" align="center">
+          <h3>Rahul Kumar</h3>
+          <p class="w3-opacity">Artist</p>
+          <p>Netaji Subhash Engineering College</p>
+          <div style="margin: 24px 0;" align="center">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>  
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{% static '/images/anuj.jfif' %}" style="width:100%">
+        <div class="w3-container" align="center">
+          <h3>Anuj Kumar Singh</h3>
+          <p class="w3-opacity">Artist</p>
+          <p>Netaji Subhash Engineering College</p>
+          <div style="margin: 24px 0;" align="center">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>  
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{% static '/images/rajni.jpeg' %}" style="width:100%">
+        <div class="w3-container" align="center" align="center">
+          <h3>Rajni Kumari</h3>
+          <p class="w3-opacity">Artist</p>
+          <p>Netaji Subhash Engineering College</p>
+          <div style="margin: 24px 0;" align="center">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>  
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top:25px" >
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="{% static '/images/ajit.jfif' %}" style="width:100%">
+        <div class="w3-container" align="center">
+          <h3>Ajit Kumar</h3>
+          <p class="w3-opacity">Artist</p>
+          <p>Netaji Subhash Engineering College</p>
+          <div style="margin: 24px 0;" align="center">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>  
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card w3-center">
+        <img src="{% static '/images/kishan.jfif' %}" style="width:100%">
+        <div class="w3-container" align="center">
+          <h3>Kishan Kanhaiya</h3>
+          <p class="w3-opacity">Artist</p>
+          <p>Netaji Subhash Engineering College</p>
+          <div style="margin: 24px 0;" align="center">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>  
+            <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <!-- Contact -->
+  <div class="w3-container">
+    <h2>Contact</h2>
+    <p>Let us book your next trip!</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> West Bengal, India<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 7070704137<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: kundankumardec16@gmail.com<br><br>
+    <form method="POST" action="/sendpmail/">
+      {% csrf_token  %}
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required="" name="Name" id="id_Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required="" name="Email" id="id_Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required="" name="msg" id="id_msg"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Find Us On</h5>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="w3-xlarge w3-padding-16">
+    <a href="https://www.facebook.com"><i class="fa fa-facebook-official w3-hover-opacity" style="color: rgb(66, 103, 178);"></i></a>
+    <a href="https://www.instagram.com"><i class="fa fa-instagram w3-hover-opacity" style="color: rgb(251, 57, 88)"></i></a>
+    <a href="https://www.snapchat.com"><i class="fa fa-snapchat w3-hover-opacity" style="color: rgb(255, 252, 0);"></i></a>
+    <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p w3-hover-opacity" style="color: red"></i></a>
+    <a href="https://www.twitter.com"><i class="fa fa-twitter w3-hover-opacity" style="color: cyan"></i></a>
+    <a href="https://www.linkedin.com"><i class="fa fa-linkedin w3-hover-opacity" style="color: rgb(14, 118, 168);"></i></a>
+  </div>
+</footer>
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+</script>
+
+
+<!--GeoLocation -->
+<script>
+  
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function check(){
+  var from = document.getElementById("from");
+  var to = document.getElementById("to");
+  if(from==to){
+    confirm("Source and destination cannot be same.");
+    return window.location.href='http://localhost:8000/home/';
+  }
+  else
+      return window.location.href='http://localhost:8000/login/';
+}
+</script>
+
+</body></html>

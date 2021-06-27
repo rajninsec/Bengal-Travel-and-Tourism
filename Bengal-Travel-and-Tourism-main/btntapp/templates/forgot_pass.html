@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>: : : Forgot_password : : :</title>
+	<link rel="icon" href="{% static 'images/icon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'images/images.jfif' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'images/w3.css' %}">
+    <link rel="stylesheet" href="{% static 'images/css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+      .myLink {display: none}
+    </style>
+</head>
+
+<header>
+	<div class="w3-bar w3-white w3-xlarge" style="position: static;font-variant: small-caps;">
+	<button class="w3-button w3-red w3-top" onclick="window.location.href='http://localhost:8000/homepage/';">Bengal Travel and Tourism</button>
+	</div>
+</header>
+
+<body class="w3-light-grey">
+	<div class="w3-display-middle" style="width:750px; height: 500px">
+	<fieldset>
+	<legend>: : : Forgot username/password : : :</legend><br>
+		<form action="/forgot_pass/" method="POST">
+			{% csrf_token  %}
+			<center>
+				<input type="text" name="username" placeholder="Enter username" style="text-align: center"; required>
+				<button type="submit">Submit</button>
+			</center>
+		</form><br><br>
+		<a href="http://localhost:8000/otp_value">Click here if you have OTP</a>
+	</fieldset>
+	</div>
+</body>
+</html>

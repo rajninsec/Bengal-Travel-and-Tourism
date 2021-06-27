@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customers List</title>
+        <script>
+            function check()
+            {
+                var result=confirm("Do you really wish to delete this record");
+                if(result==true)
+                    return true;
+                else
+                    return false;
+            }
+        </script>
+    </head>
+    <body>
+        <h2 style="color: darkgreen; text-align: center; text-shadow: rgb(54, 177, 177);">List of registered customers</h2>
+        <table border="1px" align="center" cellpadding="5px" cellspacing="2px">
+            <tr>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>DATE OF BIRTH</th>
+                <th>AGE</th>
+                <th>Gender</th>
+                <th colspan="2">ACTION</th>
+            </tr>
+            {% for s in customers %}
+            <tr>
+                <td>{{s.First_name}}</td>
+                <td>{{s.Last_name}}</td>
+                <td>{{s.Email}}</td>
+                <td>{{s.Date_Of_Birth}}</td>
+                <td>{{s.Age}}</td>
+                <td>{{s.Gender}}</td>
+                <td><a href="/editcustomer/{{s.id}}/">EDIT</a></td>
+                <td><a href="/delete/{{s.id}}/" onclick="return check()">DELETE</a></td>      
+            </tr>
+            {% endfor %}
+        </table>
+        <center><a href="/createcustomerrecord/">ADD NEW CUSTOMER</a></center>
+    </body>
+</html>

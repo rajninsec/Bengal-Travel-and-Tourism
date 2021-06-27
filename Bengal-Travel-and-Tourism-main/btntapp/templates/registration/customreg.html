@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+	<head>
+		<meta charset="UTF-8">
+		<title>New Customer Registration</title>
+		<link rel="icon" href="{% static 'images/icon.png' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'images/images.jfif' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="{% static 'images/w3.css' %}">
+    	<link rel="stylesheet" href="{% static 'images/css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+      		body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}.myLink {display: none}
+    	</style>
+	</head>
+	<body class="w3-light-grey">
+		<!-- Navigation Bar -->
+		<div class="w3-bar w3-white w3-border-bottom w3-xlarge" style="margin: 0 px;">
+		<button type="button" class="w3-button w3-red w3-top w3-left" onclick="window.location.href='http://localhost:8000/homepage/';">Bengal Travel and Tourism</button>
+		</div>
+
+		<div class="w3-display-middle" style="width:750px; height: 500px">
+		<form method="POST" action="/customreg/">
+			<fieldset>
+				<legend><h3>: : : New User registration : : :</h3></legend>
+				{% csrf_token %}
+				{{ user.as_p }}
+				{{ form.as_p }}
+				<center><br>
+					<input type="checkbox" required> I accept the <u>Terms and Conditions</u></button><br><br>
+					<button type="submit">Sign Up</button>&nbsp;&nbsp;
+					<button type="reset">Reset</button>
+				</center>
+			</fieldset>
+		</form>	
+		<marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();"><a href="/login/"><span class="w3-tag w3-yellow">Click here if you already have an account</span></a></marquee>
+	</body>
+</html>

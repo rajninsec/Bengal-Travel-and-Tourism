@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>EDIT CUSTOMER FORM</title> 
+    </head> 
+    <body> 
+        <h2 style="color: firebrick; text-align: center;">: : : : Updation form : : : :</h2>
+        <form method="post" action="/editcustomer/{{customers.id}}/"> 
+        {% csrf_token  %} 
+            <table border="1px" align="center" cellpadding="10px" cellspacing="0px"> 
+                <tr> 
+                    <th>FIRST NAME</th> 
+                    <td><input type="text" name="First_name" id="id_First_name" value="{{customers.First_name}}"></td> 
+                </tr> 
+                <tr> 
+                    <th>LAST NAME</th> 
+                    <td><input type="text" name="Last_name" id="id_Last_name" value="{{customers.Last_name}}"></td> 
+                </tr> 
+                <tr> 
+                    <th>EMAIL</th> 
+                    <td><input type="text" name="Email" id="id_Email" value="{{customers.Email}}"></td> 
+                </tr> 
+                <tr> 
+                    <th>DATE OF BIRTH</th> 
+                    <td><input type="date" name="Date_Of_Birth" id="id_Date_Of_Birth" value="{{customers.Date_Of_Birth}}"></td> 
+                </tr> 
+                <tr> 
+                    <th>AGE</th> 
+                    <td><input type="number" name="Age" id="id_Age" value="{{customers.Age}}"></td> 
+                </tr> 
+                <tr> 
+                    <th>GENDER</th> 
+                    <td><input type="text" name="Gender" id="id_Gender" value="{{customers.Gender}}"></td> 
+                </tr>
+            </table> <br>
+            <center>
+                <input type="checkbox" required> I accept the <u>Terms and Conditions</u></button><br><br>
+                <button type="Submit">UPDATE</button>
+            </center>
+            <br><br> 
+            <a href="/showcustomers/">Back to List</a> 
+        </form>
+    </body> 
+</html> 
